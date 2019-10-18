@@ -1,1 +1,3 @@
-# test-actions
+# Project template for typescript & jest based npm library with GitHub Actions pipeline
+
+....
