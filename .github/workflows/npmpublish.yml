@@ -17,6 +17,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
+      - name: Upload node_modules
+        uses: actions/upload-artifact@v1
+        with:
+          name: node_modules
+          path: node_modules
 
   publish-npm:
     needs: build
@@ -27,7 +32,11 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: node ./scripts/versionExists.js || (npm ci && npm publish)
+      - name: Download node_modules
+        uses: actions/download-artifact@v1
+        with:
+          name: node_modules
+      - run: node ./scripts/versionExists.js || (npm publish)
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -41,6 +50,10 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@jdachtera"
-      - run: node ./scripts/versionExists.js || (npm ci && npm publish)
+      - name: Download node_modules
+        uses: actions/download-artifact@v1
+        with:
+          name: node_modules
+      - run: node ./scripts/versionExists.js || (npm publish)
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
