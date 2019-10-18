@@ -1,5 +1,5 @@
 {
-  "name": "test-actions",
+  "name": "@jdachtera/typescript-jest-lib-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdachtera/test-actions.git"
+    "url": "git+https://github.com/jdachtera/typescript-jest-lib-template.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jdachtera/test-actions/issues"
+    "url": "https://github.com/jdachtera/typescript-jest-lib-template/issues"
   },
-  "homepage": "https://github.com/jdachtera/test-actions#readme",
+  "homepage": "https://github.com/jdachtera/typescript-jest-lib-template#readme",
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
