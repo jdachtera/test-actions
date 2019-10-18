@@ -11,5 +11,9 @@ exec(`npm search ${name} --json --registry ${registry}`, (error, stdout) => {
     package => package.name === name && package.version === version
   );
 
+  if (versionExists) {
+    console.log(`Package ${name}@${version} already exists`);
+  }
+
   process.exit(versionExists ? 0 : 1);
 });
