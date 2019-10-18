@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: node ./scripts/versionExists.js
+      - run: node ./scripts/versionExists.js && exit 1 || exit 0
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -39,6 +39,6 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@jdachtera"
-      - run: node ./scripts/versionExists.js
+      - run: node ./scripts/versionExists.js && exit 1 || exit 0
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
