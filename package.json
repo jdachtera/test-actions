@@ -13,8 +13,7 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "eslint": "eslint --ext .ts --cache src",
-    "version": "npm --no-git-tag-version version $@"
+    "eslint": "eslint --ext .ts --cache src"
   },
   "repository": {
     "type": "git",
