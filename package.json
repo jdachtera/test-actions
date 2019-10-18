@@ -1,0 +1,38 @@
+{
+  "name": "test-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "eslint": "eslint --ext .ts --cache src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdachtera/test-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdachtera/test-actions/issues"
+  },
+  "homepage": "https://github.com/jdachtera/test-actions#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-jasmine": "^2.10.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-junit": "^7.0.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
+}
